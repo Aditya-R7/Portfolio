@@ -1,0 +1,40 @@
+<section class="section banner" id="banner">
+  <div [@bannerTrigger] class="container">
+    <div class="section-box-banner">
+      <div class="content">
+        <div>
+          <h1>Hello! My name is</h1>
+        </div>
+        <div class="banner-title">
+          <h2 class="text-capitalize">Aditya Raj.</h2>
+        </div>
+        <div class="banner-description">
+          <p class="mt-4">
+            I'm a <span class="underline"> B.Tech</span> Grad from
+            <span class="underline">NIT Delhi.</span> I am a passionate Full
+            Stack Developer with expertise in C/C++, Python, Java, and
+            JavaScript. I specialize in building secure, scalable, and
+            high-performance applications, with a focus on problem-solving and
+            system optimization.
+          </p>
+        </div>
+      </div>
+      <div class="div-btn-banner">
+        <a
+          (click)="
+            analyticsService.sendAnalyticEvent(
+              'click_send_mail',
+              'banner',
+              'email'
+            )
+          "
+          href="mailto:adityaraj00218@gmail.com"
+          target="_black"
+          class="main-btn text-capitalize"
+        >
+          get in touch
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

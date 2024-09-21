@@ -1,0 +1,52 @@
+<section class="section more-projects" id="experience">
+  <div class="container">
+    <div class="section-box">
+      <div class="">
+        <h3 class="section-title">
+          <span class="n-section-title">02.</span> Experince
+        </h3>
+      </div>
+      <div class="mt-5">
+        <div class="row p-0">
+          <div
+            *ngFor="let e of experiences; let i = index"
+            class="col-12 project-col"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <article
+              class="group/item flex flex-col rounded-lg border-neutral-800 py-3 transition-all hover:scale-[102%]"
+            >
+              <div
+                class="w-32 shrink-0 font-medium text-neutral-400 transition-all group-hover/item:text-cyan-500 md:text-right"
+              >
+                <p class="Date">
+                  {{ e.Date }}
+                </p>
+              </div>
+              <div class="flex flex-col gap-1">
+                <h3
+                  class="flex items-center gap-2 text-2xl font-semibold organization"
+                >
+                  {{ e.Organization }}
+                </h3>
+                <p class="text-sm font-medium text-neutral-300 position-held">
+                  {{ e.Position }}
+                </p>
+                <p
+                  class="text-sm font-medium text-neutral-300 project-title"
+                  *ngIf="e.Title"
+                >
+                  {{ e.Title }}
+                </p>
+                <p class="text-sm text-neutral-400">
+                  {{ e.Description }}
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
